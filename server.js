@@ -7,9 +7,9 @@ const port = process.env.PORT || 3000; // Port should be dynamic for platforms l
 // Google OAuth2 client setup
 // Replace 'YOUR_CLIENT_ID', 'YOUR_CLIENT_SECRET', and 'YOUR_REDIRECT_URI' with actual values from Google Cloud Console
 const oauth2Client = new google.auth.OAuth2(
-    'YOUR_CLIENT_ID',
-    'YOUR_CLIENT_SECRET',
-    'YOUR_REDIRECT_URI'
+    '204937312145-t06d5vkl5667do4csjvmgeagpf08behd.apps.googleusercontent.com',
+    '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',
+    'https://pat-bee.github.io/works/'
 );
 
 // Scopes for Google Sheets API - consider whether you need full or read-only access
@@ -40,8 +40,8 @@ app.get('/api/get-sheet-data', async (req, res) => {
         const sheets = google.sheets({ version: 'v4', auth: oauth2Client });
         // Replace 'YOUR_SHEET_ID' and 'YOUR_RANGE' with actual values
         const response = await sheets.spreadsheets.values.get({
-            spreadsheetId: 'YOUR_SHEET_ID',
-            range: 'YOUR_RANGE',
+            spreadsheetId: '1-TdvQwTA8ty646DtkTkdL-_9F2fdpp7MvYhYmZZRiHQ/',
+            range: 'A1:B16',
         });
 
         // Process and respond with the data
