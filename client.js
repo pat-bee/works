@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetch data from your server, which in turn communicates with Google Sheets
 function fetchSheetData() {
     // Replace 'YOUR_SERVER_ENDPOINT' with your actual server endpoint where 'server.js' is hosted
-    fetch('https://pat-bee.github.io/')
+    fetch('https://agile-retreat-39595-6c3c0f486a01.herokuapp.com/')
         .then(response => response.json())
         .then(data => {
             const itemsList = document.getElementById('itemsList');
